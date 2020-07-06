@@ -17,7 +17,7 @@ pub async fn run() {
 }
 
 // Must use a func, because async closure is not allowed
-// It's possible for an async function to faill, so we must put it inside of Result
+// It's possible for an async function to fail, so we must put it inside of Result
 async fn slow() -> Result<impl warp::Reply, std::convert::Infallible> {
     tokio::time::delay_for(Duration::from_secs(3)).await;
     Ok("Done waiting!".to_string()) // The function didn't fail, so wrap it in Ok()

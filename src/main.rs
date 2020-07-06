@@ -8,13 +8,13 @@ pub mod step7;
 
 #[tokio::main]
 async fn main() {
-    step1::run().await;
-    step2::run().await;
-    step3::run().await;
-    step4::run().await;
-    step5::run().await;
-    step6::run().await;
-    step7::run().await;
+    step1::run().await; // Hello world!
+    // step2::run().await; // Add more routes, and take parameters!
+    // step3::run().await; // Async routes!
+    // step4::run().await; // Async and params combined!
+    // step5::run().await; // Working with synchronous code
+    // step6::run().await; // Async to the rescue?
+    // step7::run().await; // Everything together
 }
 
 // This code takes a really long time to run
