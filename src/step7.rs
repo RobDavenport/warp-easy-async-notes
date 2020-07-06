@@ -17,10 +17,9 @@ pub async fn run() {
     warp::serve(routes).run(([127, 0, 0, 1], 3030)).await;
 }
 
-// What is the output?
 async fn factorial(number: u64) -> Result<impl warp::Reply, std::convert::Infallible> {
     let task = tokio::task::spawn_blocking(move || {
-        super::really_slow_code();
+        super::really_slow_code(); // Simulate slow function or blocking I/O
         let result: u64 = (1..=number).product();
         result
     });

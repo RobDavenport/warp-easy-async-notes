@@ -19,7 +19,7 @@ pub async fn run() {
 
 // This is not async
 fn factorial(number: u64) -> String {
-    super::really_slow_code();
+    super::really_slow_code(); // Simulate slow function or blocking I/O
     let result: u64 = (1..=number).product();
     format!("{}", result)
 }

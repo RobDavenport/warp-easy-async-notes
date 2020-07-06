@@ -9,16 +9,17 @@ pub mod step7;
 #[tokio::main]
 async fn main() {
     step1::run().await;
-    // step2::run().await;
-    // step3::run().await;
-    // step4::run().await;
-    // step5::run().await;
-    // step6::run().await;
-    // step7::run().await;
+    step2::run().await;
+    step3::run().await;
+    step4::run().await;
+    step5::run().await;
+    step6::run().await;
+    step7::run().await;
 }
 
 // This code takes a really long time to run
-// It doesn't use async, so it is
+// We will use it to simulate network traffic or heavy computation
+// It doesn't use async, so it is...
 // BLOCKING or SYNCHRONOUS
 pub fn really_slow_code() {
     println!("Loading...");
